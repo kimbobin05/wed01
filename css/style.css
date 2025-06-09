@@ -1,0 +1,284 @@
+@charset "utf-8";
+/* general style */
+body{
+    margin: 0;
+    font-family: arial, sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    background-color: #150053;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header img{
+    width: 5%
+}
+
+nav{
+   margin: auto;
+    display: flex;
+    justify-content: space-between;  /*항목의 사이공간을 균등하게 분배 */
+    align-items: center;
+}
+
+.logo{
+    text-align: center;
+    font-size: 2rem;   /* 1rem-16px  2rem-32px */
+    font-weight: bold;
+}
+
+.nav-links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li{
+   margin-left: 20px;
+}
+
+
+.nav-links a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* intro Section */
+.intro{
+  background: url(../img/16.png) no-repeat center/cover;
+  height: 800px; 
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#out{
+    height: 350px;
+    background-color: #9191d2;
+    padding:100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+#out h1{
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.text{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.about{
+    background: url(../img/17.png) no-repeat center/cover;
+    position: relative;
+    color: #150053;
+}
+
+.about p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #150053;
+}
+
+.section-inner{
+     width: 100%;
+     height: 90vh; 
+
+}
+
+.accordion-content{
+    display:flex;
+}
+
+.focus{
+    flex:1;
+    justify-content: space-between; 
+    align-items: center;   
+}
+
+.accordion{
+    flex: 4;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+  
+.accordion * {
+    transition: 0.5s;
+}
+
+.accordion li{
+    height: 600px;
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    border-right: 1px solid #dddddd;
+    cursor: pointer;
+}
+
+.accordion:hover li{
+    flex: 1;
+}
+
+.accordion li:hover{
+    flex: 2;
+    background-color: f7f7f7;
+}
+
+
+.accordion li:hover .number{
+  font-size: 3rem;
+  color: #150053;
+}
+
+.accordion li:hover .number:after{
+  background-color: #150053;
+}
+
+.accordion li:before{
+  content:attr(data-text);
+  position: absolute; 
+  top: 0;
+  left:20px;
+}
+
+.accordion li .number{
+  font-size: 2rem;
+  position: relative;
+  transform: translateY(-120px);
+}
+
+.accordion li .number:after{
+  content:'';
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  background-color: #9191d2;
+  bottom: -90px;
+  left:0;
+}
+
+.accordion li .number:after p{
+    font-size: 30px;
+}
+
+  .categories button{
+    background-color: #150053;
+    color: #fff;
+    border: none;
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .content-section{
+    padding: 50px;
+    text-align: center;
+    color: #150053;
+}
+
+
+.service-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /*  필요한 경우 여러줄로 줄로 쓸수도 있다 */
+    margin-top:20px ;
+}
+
+
+.product-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    text-align: center;
+}
+
+#product{
+    background-color: #9191d2;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+#product h1{
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+#product h3{
+    font-size: 1rem;
+    margin-top: 35px;
+}
+
+.product-card  img{
+    border-radius: 10px;
+}
+
+.product-card{
+    background-color: #ffffff;
+    opacity: 100%;
+    margin: 50px;
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    height: 430px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.service-h1{
+    color: #ffffff;
+}
+
+#contact-form{
+    max-width: 600px;
+    height: 50px;
+    margin: auto;
+    flex-direction: column;
+    gap: 30px;
+/*     border: 1px solid #002407; */
+    border-radius: 5px;
+    background-color: #9191d2;
+    color: #ffffff;
+    justify-items: center;
+    justify-content: center;
+    
+}
+
+#contact-form p{padding-top: 12px;}
+
+#contact-form button{
+   width: 150px;
+   align-self: center;
+}
+
+footer{
+   background-color: #150053;
+   color: #fff;
+   text-align: center;
+   padding: 10px 0; 
+}
+
+#contact h2{color:#150053; margin: 0 auto; text-align: center; padding: 20px;}
+#product h1{margin: 0 auto; padding: 20px;}
+.content-section{padding-bottom: 20px;}
